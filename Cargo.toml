@@ -1,0 +1,10 @@
+[package]
+name = "lunatic-envelop"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+hash-map-id = "0.10.0"
+lunatic = "0.11.4"
+serde = "1.0.144"
+serde_bytes = "0.11.7"
