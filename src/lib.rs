@@ -1,16 +1,22 @@
 use hash_map_id::HashMapId;
 use lunatic::{process::{AbstractProcess, ProcessRef, RequestHandler, StartProcess, Request}};
+use serde::{Serialize, Deserialize};
 
+// Small structure used to reference a previously created envelop
+#[derive(Serialize, Deserialize)]
 pub struct Envelop(u64);
 
+// Ensure the process used has been spawned. May be useful for performance reasons.
 pub fn ensure_spawned() {
     get_ref();
 }
 
+// Create an envelop containing the given data
 pub fn create_envelop(buf: Vec<u8>) -> Envelop {
     Envelop(get_ref().request(serde_bytes::ByteBuf::from(buf)))
 }
 
+// Open a given envelop, returning the data in it. Envelops cannot be opened multiple times.
 pub fn open_envelop(buf: Envelop) -> Vec<u8> {
     get_ref().request(buf.0).into_vec()
 }
