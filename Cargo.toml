@@ -1,5 +1,6 @@
 [package]
 name = "lunatic-envelop"
+description = "A simple library providing a few helper functions for offloading large binary blobs onto another process, reducing overhead on long message chains"
 version = "1.0.0"
 edition = "2021"
 authors = ["Kai Jellinghaus"]
