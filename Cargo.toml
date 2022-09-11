@@ -1,10 +1,18 @@
 [package]
 name = "lunatic-envelop"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2021"
+authors = ["Kai Jellinghaus"]
+readme = "README.md"
+repository = "https://github.com/HurricanKai/lunatic-envelop"
+license = "MIT"
+categories = ["wasm", "lunatic"]
+keywords = ["lunatic", "messaging", "wasm"]
+
+[badges]
+maintenance = { status = "as-is" }
 
 [dependencies]
 hash-map-id = "0.10.0"
 lunatic = "0.11.4"
-serde = "1.0.144"
 serde_bytes = "0.11.7"
