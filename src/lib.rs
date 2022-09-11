@@ -3,7 +3,7 @@ use lunatic::{process::{AbstractProcess, ProcessRef, RequestHandler, StartProces
 use serde::{Serialize, Deserialize};
 
 // Small structure used to reference a previously created envelop
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Clone, Copy, PartialEq, Eq, Hash, Debug)]
 pub struct Envelop(u64);
 
 // Ensure the process used has been spawned. May be useful for performance reasons.

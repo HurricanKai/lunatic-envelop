@@ -39,7 +39,7 @@ dependencies = [
 
 [[package]]
 name = "lunatic-envelop"
-version = "1.0.0"
+version = "1.0.1"
 dependencies = [
  "hash-map-id",
  "lunatic",
