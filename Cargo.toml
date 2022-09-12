@@ -1,7 +1,7 @@
 [package]
 name = "lunatic-envelop"
 description = "A simple library providing a few helper functions for offloading large binary blobs onto another process, reducing overhead on long message chains"
-version = "1.0.1"
+version = "1.0.2"
 edition = "2021"
 authors = ["Kai Jellinghaus"]
 readme = "README.md"
@@ -18,3 +18,6 @@ hash-map-id = "0.10.0"
 lunatic = "0.11.4"
 serde = "1.0.144"
 serde_bytes = "0.11.7"
+
+[package.metadata.docs.rs]
+targets = ["wasm32-wasi"]
